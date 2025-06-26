@@ -1,13 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { faEnvelope, faHandshake } from "@fortawesome/free-regular-svg-icons";
-import Button from "./Button";
+import Button from "./ui/Button";
 import {
   faBars,
   faBriefcase,
+  faContactBook,
   faHome,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Nav = () => {
   function openMenu() {
     document.body.classList += " menu--open";
@@ -15,6 +17,13 @@ const Nav = () => {
   function closeMenu() {
     document.body.classList.remove("menu--open");
   }
+  useGSAP(() => {
+    gsap.fromTo(
+      ".nav__wrapper",
+      { opacity: 0 },
+      { opacity: 1, duration: 1, ease: "power2.inOut" }
+    );
+  }, []);
   return (
     <nav>
       <div className="container">
@@ -23,7 +32,7 @@ const Nav = () => {
             <figure className="nav__figure--logo">
               <img
                 className="nav__logo"
-                src="/Personal__logo2.png"
+                src="projects/Personal__logo2.png"
                 alt="logo"
               />
             </figure>
@@ -58,7 +67,7 @@ const Nav = () => {
             <ul className="menu__links">
               <li className="menu__list">
                 <a className="nav__link--anchor" onClick={closeMenu} href="/">
-                  Home
+                  <FontAwesomeIcon icon={faHome} /> Home
                 </a>
               </li>
               <li className="menu__list">
@@ -67,7 +76,7 @@ const Nav = () => {
                   onClick={closeMenu}
                   href="#projects"
                 >
-                  Projects
+                  <FontAwesomeIcon icon={faBriefcase} /> Projects
                 </a>
               </li>
               <li className="menu__list">
@@ -76,7 +85,7 @@ const Nav = () => {
                   onClick={closeMenu}
                   href="#skills"
                 >
-                  Skills
+                  <FontAwesomeIcon icon={faHandshake} /> Skills
                 </a>
               </li>
               <li className="menu__list">
@@ -85,7 +94,7 @@ const Nav = () => {
                   onClick={closeMenu}
                   href="#contact"
                 >
-                  Contact
+                  <FontAwesomeIcon icon={faContactBook} /> Contact
                 </a>
               </li>
             </ul>

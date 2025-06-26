@@ -1,10 +1,18 @@
 import { words } from "../Constants";
-import Button from "./Button";
+import Button from "./ui/Button";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import HeroModel from "./HeroModel";
+import { useEffect, useState } from "react";
 const Hero = () => {
+  const [showHeroModel, setShowHeroModel] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowHeroModel(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
   useGSAP(() => {
     gsap.fromTo(
       ".hero__text--h1",
@@ -16,24 +24,16 @@ const Hero = () => {
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power2.inOut" }
     );
-    gsap.fromTo(
-      ".hero__3d--wrapper",
-      { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
-    );
-    gsap.fromTo(
-      ".highlight__wrapper",
-      { y: 50, opacity: 0, scale: 0.8 },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.7,
-        stagger: 0.3,
-        ease: "power2.inOut",
-      }
-    );
   }, []);
+  useGSAP(() => {
+    if (setShowHeroModel) {
+      gsap.fromTo(
+        ".hero__3d--wrapper",
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 2, ease: "power2.inOut" }
+      );
+    }
+  }, [showHeroModel]);
   return (
     <section id="hero">
       <div className="container">
@@ -74,7 +74,7 @@ const Hero = () => {
               </div>
               <figure>
                 <div className="hero__3d--wrapper">
-                  <HeroModel />
+                  {showHeroModel && <HeroModel />}
                 </div>
               </figure>
             </div>

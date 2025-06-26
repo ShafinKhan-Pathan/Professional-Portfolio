@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { projectPages } from "../Constants";
 import HeaderShortDescription from "./ui/HeaderShortDescription";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { useMediaQuery } from "react-responsive";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const Project = () => {
+  const sectionRef = useRef(null);
+  const mainProjectRef = useRef(null);
+  const smallProject1Ref = useRef(null);
+  const smallProject2Ref = useRef(null);
+
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const currentPage = projectPages[currentPageIndex];
   const goToNextPage = () => {
@@ -27,8 +38,38 @@ const Project = () => {
       </div>
     </section>;
   }
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    const projects = [
+      mainProjectRef.current,
+      smallProject1Ref.current,
+      smallProject2Ref.current,
+    ];
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5 }
+    );
+    projects.forEach((project, index) => {
+      gsap.fromTo(
+        project,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.3 * (index + 1),
+          scrollTrigger: {
+            trigger: project,
+            start: "top bottom-=100",
+          },
+        }
+      );
+    });
+  });
   return (
-    <section id="projects">
+    <section id="projects" ref={sectionRef}>
       <div className="project__container">
         <div className="project__row">
           <HeaderShortDescription
@@ -38,7 +79,7 @@ const Project = () => {
           />
           <div className="pagination">
             <div className="project__wrapper">
-              <figure className="main__project">
+              <figure className="main__project" ref={mainProjectRef}>
                 <a
                   href={currentPage.mainProject.link}
                   target="_blank"
@@ -54,7 +95,15 @@ const Project = () => {
                   <h1 className="project__title">
                     {currentPage.mainProject.title}
                   </h1>
-                  <p>{currentPage.mainProject.description}</p>
+                  {isMobile ? (
+                    <>
+                      <p>{currentPage.mainProject.mobileDescription}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p>{currentPage.mainProject.description}</p>
+                    </>
+                  )}
                 </div>
                 <div className="icon__wrapper">
                   <a target="/blank" href={currentPage.mainProject.git}>
@@ -66,7 +115,7 @@ const Project = () => {
                 </div>
               </figure>
 
-              <figure className="small__project1">
+              <figure className="small__project1" ref={smallProject1Ref}>
                 <a
                   href={currentPage.smallProject1.link}
                   target="_blank"
@@ -82,13 +131,25 @@ const Project = () => {
                   <h1 className="project__title">
                     {currentPage.smallProject1.title}
                   </h1>
-                  <p>{currentPage.smallProject1.description}</p>
+                  {isMobile ? (
+                    <>
+                      <p>{currentPage.smallProject1.mobileDescription}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p>{currentPage.smallProject1.description}</p>
+                    </>
+                  )}
                 </div>
                 <div className="icon__wrapper">
                   <a target="/blank" href={currentPage.smallProject1.git}>
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
-                  <a rel="noopener noreferrer" target="/blank" href={currentPage.smallProject1.link}>
+                  <a
+                    rel="noopener noreferrer"
+                    target="/blank"
+                    href={currentPage.smallProject1.link}
+                  >
                     <FontAwesomeIcon icon={faLink} />
                   </a>
                 </div>
@@ -97,6 +158,7 @@ const Project = () => {
               <figure
                 className="small__project2"
                 key={currentPage.smallProject2.id}
+                ref={smallProject2Ref}
               >
                 <a
                   href={currentPage.smallProject2.link}
@@ -113,13 +175,25 @@ const Project = () => {
                   <h1 className="project__title">
                     {currentPage.smallProject2.title}
                   </h1>
-                  <p>{currentPage.smallProject2.description}</p>
+                  {isMobile ? (
+                    <>
+                      <p>{currentPage.smallProject2.mobileDescription}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p>{currentPage.smallProject2.description}</p>
+                    </>
+                  )}
                 </div>
                 <div className="icon__wrapper">
                   <a target="/blank" href={currentPage.smallProject2.git}>
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
-                  <a rel="noopener noreferrer" target="/blank" href={currentPage.smallProject2.link}>
+                  <a
+                    rel="noopener noreferrer"
+                    target="/blank"
+                    href={currentPage.smallProject2.link}
+                  >
                     <FontAwesomeIcon icon={faLink} />
                   </a>
                 </div>
@@ -129,14 +203,14 @@ const Project = () => {
               <a onClick={goToPreviousPage} aria-label="Previous Page">
                 <img
                   className="leftArrow__pagination"
-                  src="/ArrowLeft.png"
+                  src="pagination/ArrowLeft.png"
                   alt=""
                 />
               </a>
               <a onClick={goToNextPage} aria-label="Previous Page">
                 <img
                   className="rightArrow__pagination"
-                  src="/ArrowRight.png"
+                  src="pagination/ArrowRight.png"
                   alt=""
                 />
               </a>

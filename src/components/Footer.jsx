@@ -1,8 +1,14 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Footer = () => {
+  useGSAP(() => {
+      gsap.fromTo(
+        ".footer__wrapper",
+        { opacity: 0 },
+        { opacity: 1, duration: 1, ease: "power2.inOut" }
+      );
+    }, []);
   return (
     <footer>
       <div className="container">
@@ -10,15 +16,6 @@ const Footer = () => {
           <div className="footer__wrapper">
             <p>Copyright &copy; SKPTech 2025</p>
             <p>Design and Developed by Shafin Khan</p>
-            
-            {/* <div className="contact__details--icon">
-              <a href="">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </div> */}
           </div>
         </div>
       </div>
