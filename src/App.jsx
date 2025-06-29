@@ -5,10 +5,11 @@ import Nav from "./components/Nav";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
 import StarBackground from "./components/ui/StarBackground";
-
+import { ToastContainer, toast } from "react-toastify";
 const App = () => {
   return (
     <>
+      <ToastContainer theme="dark" />
       <StarBackground />
       <Nav />
       <Hero />

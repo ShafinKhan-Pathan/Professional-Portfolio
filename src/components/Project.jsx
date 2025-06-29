@@ -3,7 +3,7 @@ import { projectPages } from "../Constants";
 import HeaderShortDescription from "./ui/HeaderShortDescription";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faLink } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -107,10 +107,10 @@ const Project = () => {
                 </div>
                 <div className="icon__wrapper">
                   <a target="/blank" href={currentPage.mainProject.git}>
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon size="xs" icon={faGithub} />
                   </a>
                   <a target="/blank" href={currentPage.mainProject.link}>
-                    <FontAwesomeIcon icon={faLink} />
+                    <FontAwesomeIcon size="xs" icon={faGlobe} />
                   </a>
                 </div>
               </figure>
@@ -143,14 +143,14 @@ const Project = () => {
                 </div>
                 <div className="icon__wrapper">
                   <a target="/blank" href={currentPage.smallProject1.git}>
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon size="xs" icon={faGithub} />
                   </a>
                   <a
                     rel="noopener noreferrer"
                     target="/blank"
                     href={currentPage.smallProject1.link}
                   >
-                    <FontAwesomeIcon icon={faLink} />
+                    <FontAwesomeIcon size="xs" icon={faGlobe} />
                   </a>
                 </div>
               </figure>
@@ -187,14 +187,14 @@ const Project = () => {
                 </div>
                 <div className="icon__wrapper">
                   <a target="/blank" href={currentPage.smallProject2.git}>
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon size="xs" icon={faGithub} />
                   </a>
                   <a
                     rel="noopener noreferrer"
                     target="/blank"
                     href={currentPage.smallProject2.link}
                   >
-                    <FontAwesomeIcon icon={faLink} />
+                    <FontAwesomeIcon size="xs" icon={faGlobe} />
                   </a>
                 </div>
               </figure>

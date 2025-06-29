@@ -27,8 +27,10 @@ const HeroModel = () => {
       <OrbitControls
         enablePan={false}
         enableZoom={!isTablet}
-        maxDistance={20}
+        maxDistance={15}
         minDistance={5}
+        minPolarAngle={Math.PI / 3}
+        maxPolarAngle={Math.PI / 2}
       />
       <DeskModelLights />
       <group
