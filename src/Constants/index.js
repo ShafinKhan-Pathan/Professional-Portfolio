@@ -3,6 +3,17 @@ export const projectPages = [
     pageId: 1,
     mainProject: {
       id: 1,
+      title: "Skinstric A.I.",
+      description:
+        "Skinstric AI is a responsive, AI-powered skin analysis application built with React. It uses a multi-step form to guide users through image submission, featuring options for both live camera capture and gallery uploads. The platform integrates with a backend AI service to process the images and uses React Router for navigation. The design is enhanced with GSAP for smooth animations, ensuring a user-friendly experience.",
+      mobileDescription:
+        "A responsive AI-powered skin analysis platform built with React, GSAP, and modern CSS. Features a multi-step form that reduced user drop-off by 40% and allows image submission via live camera.",
+      imgPath: "projects/SkinstricA.I.png",
+      link: "https://skinstric-a-i.vercel.app/",
+      git: "https://github.com/ShafinKhan-Pathan/Skinstric-A.I",
+    },
+    smallProject1: {
+      id: 2,
       title: "NFT Marketplace",
       description:
         "One of my internship projects was a dynamic React NFT landing page. It features real-time API data for various sections, including filtering, and uses React Slick, countdowns, and dynamic routing for detailed views. Built with reusable components and secure environment variables, it leverages AOS for smooth animations, providing a professional UX.",
@@ -12,8 +23,9 @@ export const projectPages = [
       link: "https://shafin-internship.vercel.app/",
       git: "https://github.com/ShafinKhan-Pathan/shafin-internship",
     },
-    smallProject1: {
-      id: 2,
+
+    smallProject2: {
+      id: 3,
       title: "GetHired Job Portal",
       description:
         "This dynamic job portal, built with React, serves both candidates and recruiters with protected routes and onboarding. Candidates can browse, apply, and track jobs, while recruiters can post, manage applicants, and control listings. It features MDEditor, Country-State-City library, TailwindCSS/shadcn/ui for styling, and uses Supabase with Clerk for authentication.",
@@ -22,17 +34,6 @@ export const projectPages = [
         "React job portal for candidates / recruiters. Protected routes, onboarding. Candidates: browse, apply, track jobs. Recruiters: post, manage applicants, control listings. Uses MDEditor, CSC library, Tailwind/shadcn, Supabase/Clerk.",
       link: "https://get-hired-ten.vercel.app/",
       git: "https://github.com/ShafinKhan-Pathan/GetHired",
-    },
-    smallProject2: {
-      id: 3,
-      title: "Movie Mania",
-      description:
-        "MovieMania, is a React-based movie application where users can search for movies and filter by top-rated, top-seller, or upcoming titles. It features dynamic routing for detailed movie views, allowing users to watch YouTube teasers via a play icon. Loading states are implemented for improved UI/UX, and all data is powered by the TMDB API.",
-      mobileDescription:
-        "React movie app: search, filter (top-rated, upcoming, etc.). Dynamic routing for details, YouTube teasers. Loading states for UI/UX. Uses TMDB API.",
-      imgPath: "projects/Project3.png",
-      link: "https://react-movie-mania-rho.vercel.app/",
-      git: "https://github.com/ShafinKhan-Pathan/React-MovieMania",
     },
   },
   {
@@ -50,6 +51,18 @@ export const projectPages = [
     },
     smallProject1: {
       id: 5,
+      title: "Movie Mania",
+      description:
+        "MovieMania, is a React-based movie application where users can search for movies and filter by top-rated, top-seller, or upcoming titles. It features dynamic routing for detailed movie views, allowing users to watch YouTube teasers via a play icon. Loading states are implemented for improved UI/UX, and all data is powered by the TMDB API.",
+      mobileDescription:
+        "React movie app: search, filter (top-rated, upcoming, etc.). Dynamic routing for details, YouTube teasers. Loading states for UI/UX. Uses TMDB API.",
+      imgPath: "projects/Project3.png",
+      link: "https://react-movie-mania-rho.vercel.app/",
+      git: "https://github.com/ShafinKhan-Pathan/React-MovieMania",
+    },
+
+    smallProject2: {
+      id: 6,
       title: "CookMom Recipe",
       description:
         "CookMom! is a React-based recipe finder application that allows users to search for recipes and add them to their favorites. Users can click on any recipe to watch a related YouTube video, powered by an API. The app includes loading states and robust state management for a smooth user experience, utilizing the MealDB API for its comprehensive recipe data.",
@@ -58,17 +71,6 @@ export const projectPages = [
       imgPath: "projects/Project4.png",
       link: "https://react-recipe-finder-nu.vercel.app/",
       git: "https://github.com/ShafinKhan-Pathan/React-Recipe-Finder",
-    },
-    smallProject2: {
-      id: 6,
-      title: "Netflix Clone",
-      description:
-        "This is a React-based Netflix clone featuring a secure access model where users must register or log in via Firebase authentication. Similar to my MovieMania project, it allows users to search for movies and features dynamic routing for detailed views, including the ability to watch YouTube teasers. Loading states are implemented for a seamless user experience, with movie data powered by an external API (like TMDB).",
-      mobileDescription:
-        "React Netflix clone with Firebase auth (register/login). Search movies, dynamic routing for details, YouTube teasers. Loading states. Data from TMDB API.",
-      imgPath: "projects/Project6.png",
-      link: "https://react-netflix-clone-xi.vercel.app/",
-      git: "https://github.com/ShafinKhan-Pathan/React-Netflix-Clone",
     },
   },
 ];
