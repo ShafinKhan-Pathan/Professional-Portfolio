@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Button = ({ symbol, text, ref }) => {
-  const isExternal = ref?.startsWith("http") || ref?.startsWith("https") || ref?.endsWith(".pdf");
+  const isExternal = ref?.startsWith("http") || ref?.endsWith(".pdf");
   return (
     <a
       href={ref}
