@@ -11,7 +11,7 @@ const Skills = () => {
   const frontendSkillsRef = useRef(null);
   const additionalSkillsRef = useRef(null);
   const toolsRef = useRef(null);
-  const highlightRef = useRef(null)
+  const highlightRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
@@ -60,7 +60,6 @@ const Skills = () => {
               </React.Fragment>
             ))}
           </div>
-          <h1 className="skill__category">Additional Skills</h1>
           <div className="skills__wrapper" ref={additionalSkillsRef}>
             {AdditionalSkills.map((askill) => (
               <React.Fragment key={askill.id}>
@@ -75,7 +74,7 @@ const Skills = () => {
               </React.Fragment>
             ))}
           </div>
-          <h1 className="skill__category">Tools</h1>
+          <h1 className="skill__category">Tools & Platforms</h1>
           <div className="skills__wrapper" ref={toolsRef}>
             {Tools.map((tool) => (
               <React.Fragment key={tool.id}>

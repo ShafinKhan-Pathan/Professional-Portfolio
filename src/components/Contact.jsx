@@ -32,9 +32,9 @@ const Contact = () => {
         formRef.current,
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
-      toast("Message received! 🎉. I'll get back to you shortly.")
+      toast("Message received! 🎉. I'll get back to you shortly.");
     } catch (error) {
-      toast("Oops! Something's wrong. Please try again later 😊")
+      toast("Oops! Something's wrong. Please try again later 😊");
     } finally {
       setLoading(false);
     }
@@ -105,7 +105,6 @@ const Contact = () => {
                       className="contact__icon"
                     />
                   </button>
-                  
                 </form>
               </div>
               <div className="contact__details">
@@ -114,7 +113,12 @@ const Contact = () => {
                   style={{ display: "flex", gap: "16px" }}
                 >
                   <h3 className="contact__details--h1">View My Resume</h3>
-                  <Button text="Download Resume" symbol={faDownload} ref="/" />
+                  <Button
+                    text="Download Resume"
+                    symbol={faDownload}
+                    ref="/public/assets/Shafin-FrontendResume.pdf"
+                    target="_blank"
+                  />
                 </div>
 
                 <h1 className="contact__details--h1">

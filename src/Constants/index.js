@@ -93,50 +93,29 @@ export const words = [
   },
 ];
 export const FrontendSkills = [
-  { id: 1, name: "HTML/CSS", imgPath: "skills/HTML.png", category: "Frontend" },
-  { id: 2, name: "JavaScript", imgPath: "skills/JS.png", category: "Frontend" },
-  { id: 3, name: "React", imgPath: "skills/React.png", category: "Frontend" },
+  { id: 1, name: "HTML", imgPath: "skills/HTML.png", category: "Frontend" },
+  { id: 2, name: "CSS", imgPath: "skills/CSS.png", category: "Frontend" },
+  { id: 3, name: "JavaScript", imgPath: "skills/JS.png", category: "Frontend" },
+  { id: 4, name: "React", imgPath: "skills/React.png", category: "Frontend" },
+];
+export const AdditionalSkills = [
   {
-    id: 4,
+    id: 5,
     name: "Next.js",
     imgPath: "skills/nextjs.png",
     category: "Frontend",
   },
   {
-    id: 5,
+    id: 6,
     name: "Tailwind CSS",
     imgPath: "skills/tailwindcss.png",
     category: "Frontend",
   },
 ];
-export const AdditionalSkills = [
-  {
-    id: 6,
-    name: "Python",
-    imgPath: "skills/python_icon.png",
-    category: "Additional",
-  },
-  {
-    id: 7,
-    name: "Django",
-    imgPath: "skills/django_icon.png",
-    category: "Additional",
-  },
-  {
-    id: 8,
-    name: "PostgreSQL",
-    imgPath: "skills/postgresql_icon.png",
-    category: "Additional",
-  },
-  {
-    id: 9,
-    name: "Firebase",
-    imgPath: "skills/firebase.png",
-    category: "Additional",
-  },
-];
 export const Tools = [
-  { id: 10, name: "Git/GitHub", imgPath: "skills/git.png", category: "Tools" },
-  { id: 11, name: "VSCode", imgPath: "skills/vscode.png", category: "Tools" },
-  { id: 12, name: "Figma", imgPath: "skills/figma.png", category: "Tools" },
+  { id: 7, name: "Figma", imgPath: "skills/figma.png", category: "Tools" },
+  { id: 8, name: "VS Code", imgPath: "skills/vscode.png", category: "Tools" },
+  { id: 9, name: "Git & GitHub", imgPath: "skills/git.png", category: "Tools" },
+  { id: 10, name: "Firebase", imgPath: "skills/firebase.png",category: "Tools"},
+  { id: 11, name: "Vercel", imgPath: "skills/vercel.png", category: "Tools" },
 ];
