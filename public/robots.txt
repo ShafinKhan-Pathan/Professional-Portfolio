@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /assets/Shafin-FrontendResume.pdf
 Allow: /
 
 Sitemap: https://shafinkhan.io/sitemap.xml
