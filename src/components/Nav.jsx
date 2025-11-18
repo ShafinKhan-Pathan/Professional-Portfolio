@@ -33,7 +33,7 @@ const Nav = () => {
               <img
                 className="nav__logo"
                 src="projects/Personal__logo2.png"
-                alt="logo"
+                alt="nav_logo"
               />
             </figure>
             <ul className="nav__links">
@@ -57,11 +57,11 @@ const Nav = () => {
               <Button symbol={faEnvelope} text="Contact Me" ref="#contact" />
             </div>
           </div>
-          <button onClick={openMenu} className="btn__menu btn__menu--bars">
+          <button onClick={openMenu} className="btn__menu btn__menu--bars" aria-label="Open Menu">
             <FontAwesomeIcon icon={faBars} />
           </button>
           <div className="menu__backdrop">
-            <button onClick={closeMenu} className="btn__menu btn__menu--close">
+            <button onClick={closeMenu} className="btn__menu btn__menu--close" aria-label="Close Menu">
               <FontAwesomeIcon icon={faTimes} />
             </button>
             <ul className="menu__links">

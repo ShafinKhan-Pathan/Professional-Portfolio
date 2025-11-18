@@ -88,7 +88,7 @@ const Project = () => {
                   <img
                     className="project__img"
                     src={currentPage.mainProject.imgPath}
-                    alt=""
+                    alt="main_project"
                   />
                 </a>
                 <div className="project__info">
@@ -124,7 +124,7 @@ const Project = () => {
                   <img
                     className="project__img"
                     src={currentPage.smallProject1.imgPath}
-                    alt=""
+                    alt="secondary_project"
                   />
                 </a>
                 <div className="project__info">
@@ -168,7 +168,7 @@ const Project = () => {
                   <img
                     className="project__img"
                     src={currentPage.smallProject2.imgPath}
-                    alt=""
+                    alt="secondary_project"
                   />
                 </a>
                 <div className="project__info">
@@ -204,14 +204,14 @@ const Project = () => {
                 <img
                   className="leftArrow__pagination"
                   src="pagination/ArrowLeft.png"
-                  alt=""
+                  alt="previous_arrow"
                 />
               </a>
               <a onClick={goToNextPage} aria-label="Previous Page">
                 <img
                   className="rightArrow__pagination"
                   src="pagination/ArrowRight.png"
-                  alt=""
+                  alt="forward_arrow"
                 />
               </a>
             </>

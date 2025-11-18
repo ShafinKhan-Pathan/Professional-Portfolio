@@ -3,14 +3,14 @@ import Button from "./ui/Button";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import HeroModel from "./HeroModel";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
+const LazyHeroModel = lazy(() => import("./HeroModel"));
 const Hero = () => {
   const [showHeroModel, setShowHeroModel] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowHeroModel(true);
-    }, 500);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
   useGSAP(() => {
@@ -50,7 +50,7 @@ const Hero = () => {
                           <img
                             className="hero__text--icon"
                             src={word.imgPath}
-                            alt=""
+                            alt="my-skills"
                           />
                           {word.text}
                         </span>
@@ -74,7 +74,11 @@ const Hero = () => {
               </div>
               <figure>
                 <div className="hero__3d--wrapper">
-                  {showHeroModel && <HeroModel />}
+                  {showHeroModel && (
+                    <Suspense fallback={null}>
+                      <LazyHeroModel />
+                    </Suspense>
+                  )}
                 </div>
               </figure>
             </div>

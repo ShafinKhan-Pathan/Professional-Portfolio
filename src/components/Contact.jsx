@@ -98,6 +98,7 @@ const Contact = () => {
                     type="submit"
                     className="nav__button--contact"
                     disabled={loading}
+                    aria-label="contact_me"
                   >
                     {loading ? "Sending..." : "Send Message"}
                     <FontAwesomeIcon

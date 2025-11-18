@@ -7,7 +7,7 @@ const Button = ({ symbol, text, ref }) => {
       href={ref}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
-      <button className="nav__button--contact">
+      <button className="nav__button--contact" aria-label={text}>
         {text}
         <FontAwesomeIcon icon={symbol} className="contact__icon" />
       </button>
