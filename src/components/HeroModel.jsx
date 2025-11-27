@@ -9,7 +9,7 @@ const HeroModel = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isSmallMobile = useMediaQuery({ query: "(max-width:480px)" });
-  let modelScale = 0.9;
+  let modelScale = 0.8;
   if (isLaptop) {
     modelScale = 0.8;
   }

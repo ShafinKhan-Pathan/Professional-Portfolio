@@ -89,6 +89,7 @@ const Project = () => {
                     className="project__img"
                     src={currentPage.mainProject.imgPath}
                     alt="main_project"
+                    loading="lazy"
                   />
                 </a>
                 <div className="project__info">
@@ -125,6 +126,7 @@ const Project = () => {
                     className="project__img"
                     src={currentPage.smallProject1.imgPath}
                     alt="secondary_project"
+                    loading="lazy"
                   />
                 </a>
                 <div className="project__info">
@@ -169,6 +171,7 @@ const Project = () => {
                     className="project__img"
                     src={currentPage.smallProject2.imgPath}
                     alt="secondary_project"
+                    loading="lazy"
                   />
                 </a>
                 <div className="project__info">

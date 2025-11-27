@@ -87,7 +87,7 @@ const Contact = () => {
                   <label htmlFor="message">Your Message : </label>
                   <textarea
                     rows="5"
-                    placeholder="Let's discuss how I can help you ?"
+                    placeholder="Share your vision—let’s make it real."
                     id="message"
                     name="message"
                     value={formData.message}
@@ -117,7 +117,7 @@ const Contact = () => {
                   <Button
                     text="Download Resume"
                     symbol={faDownload}
-                    ref="/assets/Shafin-FrontendResume.pdf"
+                    ref="/assets/ShafinKhan-FrontendResume.pdf"
                   />
                 </div>
 
