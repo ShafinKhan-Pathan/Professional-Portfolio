@@ -117,7 +117,7 @@ const Contact = () => {
                   <Button
                     text="Download Resume"
                     symbol={faDownload}
-                    ref="/assets/ShafinKhan-FrontendResume.pdf"
+                    href="/assets/ShafinKhan_FrontendEngineer_Resume.pdf"
                   />
                 </div>
 
@@ -139,7 +139,7 @@ const Contact = () => {
                   </a>
                   <a
                     target="/blank"
-                    href="mailto:shafinkhanpathan2002@gmail.com"
+                    href="mailto:kshafin575@gmail.com"
                   >
                     <FontAwesomeIcon icon={faEnvelope} />
                   </a>

@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Button = ({ symbol, text, ref }) => {
-  const isExternal = ref?.startsWith("http") || ref?.endsWith(".pdf");
+const Button = ({ symbol, text, href }) => {
+  const isExternal = href?.startsWith("http") || href?.endsWith(".pdf");
   return (
     <a
-      href={ref}
+      href={href}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       <button className="nav__button--contact" aria-label={text}>

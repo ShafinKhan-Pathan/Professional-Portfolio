@@ -68,7 +68,7 @@ const Hero = () => {
                   <Button
                     symbol={faArrowDown}
                     text="Check My Work"
-                    ref="#projects"
+                    href="#projects"
                   />
                 </div>
               </div>
