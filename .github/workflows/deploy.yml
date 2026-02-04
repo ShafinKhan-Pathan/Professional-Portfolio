@@ -1,4 +1,4 @@
-name: Deploy React Vite Portfolio to Hostinger
+name: Deploy React Vite Portfolio to Hostinger (SFTP)
 
 on:
   push:
@@ -19,11 +19,9 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy dist to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SFTP to Hostinger
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: public_html/
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
