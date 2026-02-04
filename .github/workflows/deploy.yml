@@ -10,26 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 3. Build project
       - name: Build project
         run: npm run build
 
-      # 4. Deploy dist via SFTP to Hostinger
-      - name: Deploy via SFTP to Hostinger
+      - name: Deploy to Hostinger via SFTP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          port: ${{ secrets.SFTP_PORT }}
-          source: "dist/**"
-          target: "public_html"
+          port: 65002
+          source: "dist/*"
+          target: "/home/u861441597/domains/shafinkhan.io/public_html"
           strip_components: 1
+          rm: true
