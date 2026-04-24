@@ -20,12 +20,12 @@ const Project = () => {
   const currentPage = projectPages[currentPageIndex];
   const goToNextPage = () => {
     setCurrentPageIndex((prevPageIndex) =>
-      prevPageIndex === projectPages.length - 1 ? 0 : prevPageIndex + 1
+      prevPageIndex === projectPages.length - 1 ? 0 : prevPageIndex + 1,
     );
   };
   const goToPreviousPage = () => {
     setCurrentPageIndex((prevPageIndex) =>
-      prevPageIndex === 0 ? projectPages.length - 1 : prevPageIndex - 1
+      prevPageIndex === 0 ? projectPages.length - 1 : prevPageIndex - 1,
     );
   };
   if (!currentPage) {
@@ -41,6 +41,7 @@ const Project = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
+    if (!sectionRef.current) return;
     const projects = [
       mainProjectRef.current,
       smallProject1Ref.current,
@@ -49,9 +50,10 @@ const Project = () => {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 1.5 },
     );
     projects.forEach((project, index) => {
+      if (!project) return;
       gsap.fromTo(
         project,
         { y: 50, opacity: 0 },
@@ -64,16 +66,16 @@ const Project = () => {
             trigger: project,
             start: "top bottom-=100",
           },
-        }
+        },
       );
     });
-  });
+  }, []);
   return (
     <section id="projects" ref={sectionRef}>
       <div className="project__container">
         <div className="project__row">
           <HeaderShortDescription
-            image={"/requirements.png"}
+            image={"/requirements.webp"}
             title="Solutions I've Built"
             description="A Glimpse into My Development Work."
           />
@@ -88,8 +90,11 @@ const Project = () => {
                   <img
                     className="project__img"
                     src={currentPage.mainProject.imgPath}
-                    alt="main_project"
+                    alt={currentPage.mainProject.title}
                     loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="400"
                   />
                 </a>
                 <div className="project__info">
@@ -125,8 +130,11 @@ const Project = () => {
                   <img
                     className="project__img"
                     src={currentPage.smallProject1.imgPath}
-                    alt="secondary_project"
+                    alt={currentPage.smallProject1.title}
                     loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="400"
                   />
                 </a>
                 <div className="project__info">
@@ -144,7 +152,11 @@ const Project = () => {
                   )}
                 </div>
                 <div className="icon__wrapper">
-                  <a target="/blank" href={currentPage.smallProject1.git}>
+                  <a
+                    target="/blank"
+                    rel="noopener noreferrer"
+                    href={currentPage.smallProject1.git}
+                  >
                     <FontAwesomeIcon size="xs" icon={faGithub} />
                   </a>
                   <a
@@ -170,8 +182,11 @@ const Project = () => {
                   <img
                     className="project__img"
                     src={currentPage.smallProject2.imgPath}
-                    alt="secondary_project"
+                    alt={currentPage.smallProject2.title}
                     loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="400"
                   />
                 </a>
                 <div className="project__info">
@@ -189,7 +204,11 @@ const Project = () => {
                   )}
                 </div>
                 <div className="icon__wrapper">
-                  <a target="/blank" href={currentPage.smallProject2.git}>
+                  <a
+                    target="/blank"
+                    rel="noopener noreferrer"
+                    href={currentPage.smallProject2.git}
+                  >
                     <FontAwesomeIcon size="xs" icon={faGithub} />
                   </a>
                   <a
@@ -206,14 +225,14 @@ const Project = () => {
               <a onClick={goToPreviousPage} aria-label="Previous Page">
                 <img
                   className="leftArrow__pagination"
-                  src="pagination/ArrowLeft.png"
+                  src="pagination/ArrowLeft.webp"
                   alt="previous_arrow"
                 />
               </a>
               <a onClick={goToNextPage} aria-label="Previous Page">
                 <img
                   className="rightArrow__pagination"
-                  src="pagination/ArrowRight.png"
+                  src="pagination/ArrowRight.webp"
                   alt="forward_arrow"
                 />
               </a>

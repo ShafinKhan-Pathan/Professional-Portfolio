@@ -41,7 +41,7 @@ const Skills = () => {
       <div className="container">
         <div className="row">
           <HeaderShortDescription
-            image={"/handshake.png"}
+            image={"/handshake.webp"}
             title="Skills Spotlight"
             description="What I bring to the table & My Key Skills"
           />
@@ -91,17 +91,17 @@ const Skills = () => {
           </div>
           <div className="highlights" ref={highlightRef}>
             <Highlight
-              icon="/seo.png"
+              icon="/seo.webp"
               title="Quality Focus"
               description="Delivering high-quality results while maintaining the perfomance with responsive design and attention to every detail."
             />
             <Highlight
-              icon="/time.png"
+              icon="/time.webp"
               title="Time Management"
               description="To Optimize the productivity, I prioritize completing projects ahead of deadlines to ensure seamless business operations and prevent potential delays"
             />
             <Highlight
-              icon="/solution.png"
+              icon="/solution.webp"
               title="Effective Solutions"
               description="I always approach my work with the 'Don't Repeat Yourself' (DRY) principle in mind, planning and developing optimal and effective solutions for my projects."
             />

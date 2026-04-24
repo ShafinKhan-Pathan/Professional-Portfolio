@@ -54,7 +54,7 @@ const Nav = () => {
               </li>
             </ul>
             <div className="nav__button">
-              <Button symbol={faEnvelope} text="Contact Me" ref="#contact" />
+              <Button symbol={faEnvelope} text="Contact Me" href="#contact" />
             </div>
           </div>
           <button onClick={openMenu} className="btn__menu btn__menu--bars" aria-label="Open Menu">

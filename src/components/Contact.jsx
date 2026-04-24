@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <HeaderShortDescription
-              image="/chat.png"
+              image="/chat.webp"
               title="Have questions or ideas ? let's discuss 🚀"
               description="Get In Touch - Let's Connect"
             />
@@ -117,7 +117,7 @@ const Contact = () => {
                   <Button
                     text="Download Resume"
                     symbol={faDownload}
-                    href="/assets/ShafinKhan_FrontendEngineer_Resume.pdf"
+                    href="/assets/Shafin_Frontend_Engineer_Resume.pdf"
                   />
                 </div>
 
