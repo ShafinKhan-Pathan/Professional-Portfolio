@@ -117,7 +117,7 @@ const Contact = () => {
                   <Button
                     text="Download Resume"
                     symbol={faDownload}
-                    href="/assets/Shafin_Frontend_Engineer_Resume.pdf"
+                    href="/assets/Shafin_Khan_Frontend_Software_Engineer_Resume.pdf"
                   />
                 </div>
 
