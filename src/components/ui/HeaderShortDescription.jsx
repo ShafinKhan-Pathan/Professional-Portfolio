@@ -5,7 +5,7 @@ const HeaderShortDescription = ({image, title, description}) => {
         <img className="header__summary--icon" src={`/icons${image}`} alt="quick_summary_icon" />
        {title}
       </h5>
-      <h1 className="header__short--description">{description}</h1>
+      <h3 className="header__short--description">{description}</h3>
     </div>
   );
 };

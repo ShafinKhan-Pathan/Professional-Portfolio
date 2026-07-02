@@ -97,42 +97,31 @@ export const words = [
   },
 ];
 export const FrontendSkills = [
-  { id: 1, name: "HTML", imgPath: "skills/HTML.webp", category: "Frontend" },
-  { id: 2, name: "CSS", imgPath: "skills/CSS.webp", category: "Frontend" },
-  { id: 3, name: "JavaScript", imgPath: "skills/JS.webp", category: "Frontend" },
-  { id: 12, name: "TypeScript", imgPath: "skills/TypeScript.webp", category: "Frontend" },
-  { id: 4, name: "React", imgPath: "skills/React.webp", category: "Frontend" },
+  { id: 1, name: "React", imgPath: "skills/React.webp", category: "Software" },
+  { id: 2, name: "Next.js", imgPath: "skills/nextjs.webp", category: "Software" },
+  { id: 3, name: "TypeScript", imgPath: "skills/TypeScript.webp", category: "Software" },
+  { id: 4, name: "Node.js", imgPath: "skills/nodejs.webp", category: "Software" },
+  { id: 5, name: "REST APIs", imgPath: "skills/api.webp", category: "Software" },
+  { id: 6, name: "PostgreSQL", imgPath: "skills/postgresql_icon.webp", category: "Software" },
 ];
 export const AdditionalSkills = [
-  {
-    id: 5,
-    name: "Next.js",
-    imgPath: "skills/nextjs.webp",
-    category: "Frontend",
-  },
-  {
-    id: 13,
-    name: "Redux",
-    imgPath: "skills/Redux.webp",
-    category: "Frontend",
-  },
-  {
-    id: 6,
-    name: "Tailwind CSS",
-    imgPath: "skills/tailwindcss.webp",
-    category: "Frontend",
-  },
+  { id: 7, name: "Windows", imgPath: "skills/windows.webp", category: "IT" },
+  { id: 8, name: "macOS", imgPath: "skills/macos.webp", category: "IT" },
+  { id: 9, name: "DNS", imgPath: "skills/dns.webp", category: "IT" },
+  { id: 10, name: "VoIP", imgPath: "skills/voip.webp", category: "IT" },
+  { id: 11, name: "Networking", imgPath: "skills/networking.webp", category: "IT" },
+  { id: 12, name: "Hardware", imgPath: "skills/hardware.webp", category: "IT" },
 ];
 export const Tools = [
-  { id: 7, name: "Figma", imgPath: "skills/figma.webp", category: "Tools" },
-  { id: 8, name: "VS Code", imgPath: "skills/vscode.webp", category: "Tools" },
-  { id: 9, name: "Git & GitHub", imgPath: "skills/git.webp", category: "Tools" },
+  { id: 13, name: "Git & GitHub", imgPath: "skills/git.webp", category: "Tools" },
+  { id: 14, name: "VS Code", imgPath: "skills/vscode.webp", category: "Tools" },
   {
-    id: 10,
+    id: 15,
     name: "Firebase",
     imgPath: "skills/firebase.webp",
     category: "Tools",
   },
-  { id: 11, name: "Vercel", imgPath: "skills/vercel.webp", category: "Tools" },
-  { id: 14, name: "Stripe", imgPath: "skills/stripe.webp", category: "Tools" },
+  { id: 16, name: "Vercel", imgPath: "skills/vercel.webp", category: "Tools" },
+  { id: 17, name: "Stripe", imgPath: "skills/stripe.webp", category: "Tools" },
+  { id: 18, name: "Jira", imgPath: "skills/jira.webp", category: "Tools" },
 ];

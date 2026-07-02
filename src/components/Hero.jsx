@@ -62,8 +62,7 @@ const Hero = () => {
                 <h1 className="hero__text--h1">into Real World Projects</h1>
                 <h1 className="hero__text--h1">that Deliver Results</h1>
                 <p className="hero__text--p">
-                  Hi, I'm Shafin Khan, a developer based in Texas, on a journey
-                  to become a Frontend Software Engineer.
+                  I build modern web applications and solve real-world technical problems across software, systems, networking, and automation.
                 </p>
                 <div className="project__button">
                   <Button

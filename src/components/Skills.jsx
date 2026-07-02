@@ -45,7 +45,7 @@ const Skills = () => {
             title="Skills Spotlight"
             description="What I bring to the table & My Key Skills"
           />
-          <h1 className="skill__category">Frontend Skills</h1>
+          <h3 className="skill__category software__category">Software Engineering</h3>
           <div className="skills__wrapper" ref={frontendSkillsRef}>
             {FrontendSkills.map((fskill) => (
               <React.Fragment key={fskill.id}>
@@ -55,11 +55,12 @@ const Skills = () => {
                     src={fskill.imgPath}
                     alt={fskill.name}
                   />
-                  <h1 className="skills__info--h1">{fskill.name}</h1>
+                  <h3 className="skills__info--h1">{fskill.name}</h3>
                 </div>
               </React.Fragment>
             ))}
           </div>
+          <h3 className="skill__category infrastructure__category">IT Support & Infrastructure</h3>
           <div className="skills__wrapper" ref={additionalSkillsRef}>
             {AdditionalSkills.map((askill) => (
               <React.Fragment key={askill.id}>
@@ -69,12 +70,12 @@ const Skills = () => {
                     src={askill.imgPath}
                     alt={askill.name}
                   />
-                  <h1 className="skills__info--h1">{askill.name}</h1>
+                  <h3 className="skills__info--h1">{askill.name}</h3>
                 </div>
               </React.Fragment>
             ))}
           </div>
-          <h1 className="skill__category">Tools & Platforms</h1>
+          <h3 className="skill__category tools__category">Tools & Platforms</h3>
           <div className="skills__wrapper" ref={toolsRef}>
             {Tools.map((tool) => (
               <React.Fragment key={tool.id}>
@@ -84,26 +85,26 @@ const Skills = () => {
                     src={tool.imgPath}
                     alt={tool.name}
                   />
-                  <h1 className="skills__info--h1">{tool.name}</h1>
+                  <h3 className="skills__info--h1">{tool.name}</h3>
                 </div>
               </React.Fragment>
             ))}
           </div>
           <div className="highlights" ref={highlightRef}>
             <Highlight
-              icon="/seo.webp"
-              title="Quality Focus"
-              description="Delivering high-quality results while maintaining the perfomance with responsive design and attention to every detail."
+              icon="/troubleshooting.webp"
+              title="Root Cause Analysis"
+              description="Diagnosing hardware, software, network, and system issues with a structured problem-solving approach."
             />
             <Highlight
-              icon="/time.webp"
-              title="Time Management"
-              description="To Optimize the productivity, I prioritize completing projects ahead of deadlines to ensure seamless business operations and prevent potential delays"
+              icon="/automation.webp"
+              title="Automation & Improvements"
+              description="Automating repetitive workflows and improving efficiency through tools, scripts, and better processes"
             />
             <Highlight
-              icon="/solution.webp"
-              title="Effective Solutions"
-              description="I always approach my work with the 'Don't Repeat Yourself' (DRY) principle in mind, planning and developing optimal and effective solutions for my projects."
+              icon="/enterprise_support.webp"
+              title="Enterprise Support Experience"
+              description="Supporting 500+ users, 300+ workstations, VOIP systems, printers, cameras, and infrastructure in production environments."
             />
           </div>
         </div>
